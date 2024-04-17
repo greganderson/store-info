@@ -8,7 +8,7 @@ from models import StoreItem
 app = FastAPI()
 
 with open("store_items.json", "r") as f:
-    data = json.load(f)
+    data: list[dict] = json.load(f)
 
 items: list[StoreItem] = []
 
